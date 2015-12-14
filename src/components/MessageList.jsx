@@ -3,6 +3,7 @@ import Message from './Message.jsx';
 import mui from 'material-ui';
 import Firebase from 'firebase';
 import _ from 'lodash';
+import firebaseConfig from '../firebase.config.js'
 
 var {Card, List} = mui;
 
@@ -14,7 +15,7 @@ class MessageList extends React.Component {
       messages: {}
     };
 
-    this.firebaseRef = new Firebase('https://react-app-startupit69.firebaseio.com/messages');
+    this.firebaseRef = new Firebase(firebaseConfig.firebaseURL);
 
     this.firebaseRef.on("child_added", (msg)=> {
       if (this.state.messages[msg.key()]) {

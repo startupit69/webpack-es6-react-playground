@@ -2,6 +2,8 @@ import React from 'react';
 import mui from 'material-ui';
 import trim from 'trim';
 import Firebase from 'firebase';
+import firebaseConfig from '../firebase.config.js'
+
 var {Card} = mui;
 
 class MessageBox extends React.Component {
@@ -12,7 +14,7 @@ class MessageBox extends React.Component {
       message: ''
     };
 
-    this.firebaseRef = new Firebase('https://react-app-startupit69.firebaseio.com/messages');
+    this.firebaseRef = new Firebase(firebaseConfig.firebaseURL);
   }
 
   onChange(evt) {
