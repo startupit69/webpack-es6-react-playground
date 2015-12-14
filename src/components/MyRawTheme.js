@@ -6,7 +6,7 @@ export default {
   spacing: Spacing,
   fontFamily: 'Roboto, sans-serif',
   palette: {
-    primary1Color: Colors.cyan500,
+    primary1Color: Colors.indigo200,
     primary2Color: Colors.cyan700,
     primary3Color: Colors.lightBlack,
     accent1Color: Colors.pinkA200,
@@ -18,5 +18,5 @@ export default {
     borderColor: Colors.grey300,
     disabledColor: ColorManipulator.fade(Colors.darkBlack, 0.3),
     pickerHeaderColor: Colors.cyan500,
-  },
+  }
 };
