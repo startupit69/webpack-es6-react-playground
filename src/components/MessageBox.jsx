@@ -6,6 +6,7 @@ import firebaseConfig from '../firebase.config.js'
 
 var {Card} = mui;
 
+
 class MessageBox extends React.Component {
   constructor(props) {
     super(props);

@@ -9,22 +9,17 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import LightRawTheme from 'material-ui/lib/styles/raw-themes/light-raw-theme';
 import Colors from 'material-ui/lib/styles/colors';
 
-//ES7 import ThemeDecorator from 'material-ui/lib/styles/theme-decorator';
+import ThemeDecorator from 'material-ui/lib/styles/theme-decorator';
 
 var AppBar = mui.AppBar;
+var MyThemeManager = ThemeManager.getMuiTheme(MyRawTheme);
 
-//ES7 @ThemeDecorator(ThemeManager.getMuiTheme(MyRawTheme))
+@ThemeDecorator(ThemeManager.getMuiTheme(MyRawTheme))
 class App extends React.Component {
 
   constructor(){
     super();
   }
-
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
-    };
-  };
 
   render () {
     return(
@@ -42,9 +37,5 @@ class App extends React.Component {
     );
   }
 }
-
-App.childContextTypes = {
-    muiTheme: React.PropTypes.object
-};
 
 export default App;
