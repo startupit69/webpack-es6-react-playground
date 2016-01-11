@@ -3,7 +3,7 @@ import Message from './Message.jsx';
 import mui from 'material-ui';
 import Firebase from 'firebase';
 import _ from 'lodash';
-import firebaseConfig from '../firebase.config.js'
+import firebaseConfig from '../firebase.config.js';
 
 var {Card, List} = mui;
 
