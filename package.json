@@ -7,6 +7,10 @@
     "test": "jest --verbose"
   },
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageOnlyFrom": {
+      "components/CheckboxWithLabel.js": true
+    },
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "unmockedModulePathPatterns": [
     "<rootDir>/node_modules/react",
