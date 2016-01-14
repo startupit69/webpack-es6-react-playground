@@ -4,32 +4,49 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
-  "author": "",
-  "license": "ISC",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+    "<rootDir>/node_modules/react",
+    "<rootDir>/node_modules/react-dom",
+    "<rootDir>/node_modules/react-addons-test-utils",
+    "<rootDir>/node_modules/fbjs"
+    ]
+  },
+  "jest-webpack-alias": {
+    "profile": "dev"
+  },
+  "author": "Ivan Tanaskovic",
+  "license": "MIT",
   "dependencies": {
     "alt": "^0.18.1",
     "alt-utils": "^1.0.0",
-    "babel-core": "^6.3.15",
-    "babel-loader": "^6.2.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-1": "^6.3.13",
     "css-loader": "^0.23.0",
     "firebase": "^2.3.2",
     "lodash": "^3.10.1",
     "material-ui": "^0.13.4",
     "node-sass": "^3.4.2",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
     "react-hot-loader": "^1.3.0",
     "react-tap-event-plugin": "^0.2.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "trim": "0.0.1",
-    "webpack": "^1.12.9"
+    "trim": "0.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "jest-cli": "^0.8.2",
+    "jest-webpack-alias": "^2.2.0",
+    "react-addons-test-utils": "^0.14.6",
+    "webpack": "^1.12.9"
+  }
 }
